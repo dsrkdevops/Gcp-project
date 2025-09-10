@@ -1,12 +1,14 @@
-# Use official Node.js image
-FROM node:18-slim
+# Use Node.js LTS
+FROM node:18
 
-# Create app directory
+# Set working directory
 WORKDIR /usr/src/app
 
-# Install dependencies
+# Copy package files
 COPY package*.json ./
-RUN npm install --only=production
+
+# Install dependencies
+RUN npm install
 
 # Copy app source
 COPY . .
@@ -14,5 +16,5 @@ COPY . .
 # Expose port
 EXPOSE 8080
 
-# Run app
+# Start app
 CMD ["npm", "start"]

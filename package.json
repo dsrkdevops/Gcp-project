@@ -1,7 +1,6 @@
 {
-  "name": "gke-sample-app",
+  "name": "gke-demo",
   "version": "1.0.0",
-  "description": "Sample Node.js app for GCP CI/CD pipeline",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

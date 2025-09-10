@@ -1,11 +1,11 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
-app.get('/', (req, res) => {
-  res.send('🚀 Hello from GKE running on GCP!');
+app.get("/", (req, res) => {
+  res.send("Hello from GCP GKE! 🚀");
 });
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

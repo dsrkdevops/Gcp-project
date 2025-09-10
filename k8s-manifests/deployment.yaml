@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gke-sample-app
-  labels:
-    app: gke-sample-app
+  name: gke-demo
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: gke-sample-app
+      app: gke-demo
   template:
     metadata:
       labels:
-        app: gke-sample-app
+        app: gke-demo
     spec:
       containers:
-        - name: gke-sample-app
-          image: gcr.io/PROJECT_ID/gke-sample-app:latest
-          ports:
-            - containerPort: 8080
+      - name: gke-demo
+        image: gcr.io/$PROJECT_ID/gke-demo:$COMMIT_SHA
+        ports:
+        - containerPort: 8080
