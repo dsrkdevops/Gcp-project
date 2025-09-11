@@ -27,3 +27,5 @@ steps:
 
 images:
 - 'gcr.io/$PROJECT_ID/gke-demo:$COMMIT_SHA'
+options:
+  logging: CLOUD_LOGGING_ONLY
